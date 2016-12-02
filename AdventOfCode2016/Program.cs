@@ -5,7 +5,8 @@
         // Simple console class for every day, see each "Day*" class for details.
         public static void Main(string[] args)
         {
-            Day1.Resolve();
+            //Day1.Resolve();
+            Day2.Resolve();
         }
     }
 }

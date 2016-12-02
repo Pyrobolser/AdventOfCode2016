@@ -33,9 +33,36 @@ namespace AdventOfCode2016
         private static Direction myDirection = Direction.North;
         private static Coord myPosition = new Coord(0, 0);
         private static List<Coord> locations = new List<Coord>();
+        
+        // Start the movement analysis.
+        public static void Resolve()
+        {
+            var input = ReadInput();
+            var isDoubleLocationFound = false;
+            foreach (string s in input)
+            {
+                myDirection = GetNewDirection(s[0]);
+                for (int i = 0; i < int.Parse(s.Substring(1)); i++)
+                {
+                    myPosition = GetNewPosition();
+
+                    if (!isDoubleLocationFound && locations.Contains(myPosition))
+                    {
+                        WriteLine($"The Easter Bunny HQ real location is {Math.Abs(myPosition.x) + Math.Abs(myPosition.y)} block(s) away.");
+                        isDoubleLocationFound = true;
+                    }
+                    else
+                    {
+                        locations.Add(myPosition);
+                    }
+                }
+            }
+
+            WriteLine($"The Easter Bunny HQ is {Math.Abs(myPosition.x) + Math.Abs(myPosition.y)} block(s) away.");
+        }
 
         // Read the Day 1 input.
-        public static string[] ReadInput()
+        private static string[] ReadInput()
         {
             return File.ReadAllText(@"Inputs\day1.txt").Split(',').Select(s => s.Trim()).ToArray();
         }
@@ -106,31 +133,6 @@ namespace AdventOfCode2016
             return newDirection;
         }
 
-        // Start the movement analysis.
-        public static void Resolve()
-        {
-            var input = ReadInput();
-            var isDoubleLocationFound = false;
-            foreach (string s in input)
-            {
-                myDirection = GetNewDirection(s[0]);
-                for (int i = 0; i < int.Parse(s.Substring(1)); i++)
-                {
-                    myPosition = GetNewPosition();
-
-                    if (!isDoubleLocationFound && locations.Contains(myPosition))
-                    {
-                        WriteLine($"The Easter Bunny HQ real location is {Math.Abs(myPosition.x) + Math.Abs(myPosition.y)} block(s) away.");
-                        isDoubleLocationFound = true;
-                    }
-                    else
-                    {
-                        locations.Add(myPosition);
-                    }
-                }
-            }
-
-            WriteLine($"The Easter Bunny HQ is {Math.Abs(myPosition.x) + Math.Abs(myPosition.y)} block(s) away.");
-        }
+        
     }
 }
