@@ -6,7 +6,8 @@
         public static void Main(string[] args)
         {
             //Day1.Resolve();
-            Day2.Resolve();
+            //Day2.Resolve();
+            Day3.Resolve();
         }
     }
 }
