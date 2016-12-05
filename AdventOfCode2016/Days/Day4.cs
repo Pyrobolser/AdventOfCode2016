@@ -17,7 +17,7 @@ namespace AdventOfCode2016
             WriteLine($"The sum of the sector IDs of the real rooms is { result }.");
         }
 
-        // Read the Day 3 input.
+        // Read the Day 4 input.
         private static string[] ReadInput()
         {
             return File.ReadAllLines(@"Inputs\Day4.txt");
