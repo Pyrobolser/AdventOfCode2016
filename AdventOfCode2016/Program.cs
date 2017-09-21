@@ -10,7 +10,8 @@
             //Day3.Resolve();
             //Day4.Resolve();
             //Day5.Resolve();
-            Day6.Resolve();
+            //Day6.Resolve();
+            Day7.Resolve();
         }
     }
 }

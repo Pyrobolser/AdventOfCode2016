@@ -6,14 +6,15 @@ using static System.Console;
 
 namespace AdventOfCode2016
 {
+    // http://adventofcode.com/2016/day/5
     public static class Day5
     {
         // Find the door hash.
         public static void Resolve()
         {
-            var input = ReadInput();
-            var firstDoor = GetPassword(input);
-            var secondDoor = GetSecondPassword(input);
+            string input = ReadInput();
+            string firstDoor = GetPassword(input);
+            string secondDoor = GetSecondPassword(input);
 
             Clear();
             WriteLine($"The password of the first door is { firstDoor }.");

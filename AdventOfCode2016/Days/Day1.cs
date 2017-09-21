@@ -37,7 +37,7 @@ namespace AdventOfCode2016
         // Start the movement analysis.
         public static void Resolve()
         {
-            var input = ReadInput();
+            string[] input = ReadInput();
             var isDoubleLocationFound = false;
             foreach (string s in input)
             {

@@ -11,12 +11,12 @@ namespace AdventOfCode2016
         // Find the number of possible triangles.
         public static void Resolve()
         {
-            var input = ReadInput();
-            var triangles = GetTriangles(input);
-            var columnTriangles = GetColumnTriangles(input);
+            string[] input = ReadInput();
+            int[,] triangles = GetTriangles(input);
+            int[,] columnTriangles = GetColumnTriangles(input);
 
-            var validTriangles = GetValidTriangles(triangles);
-            var validColumnTriangles = GetValidTriangles(columnTriangles);
+            int validTriangles = GetValidTriangles(triangles);
+            int validColumnTriangles = GetValidTriangles(columnTriangles);
 
             
             WriteLine($"Among the listed triangles, { validTriangles } are possible(s).");

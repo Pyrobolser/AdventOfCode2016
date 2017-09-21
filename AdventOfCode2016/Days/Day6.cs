@@ -5,15 +5,16 @@ using static System.Console;
 
 namespace AdventOfCode2016
 {
+    // http://adventofcode.com/2016/day/6
     public static class Day6
     {
         // Decode the messages.
         public static void Resolve()
         {
-            var input = ReadInput();
-            var encoded = ReverseInput(input);
-            var messagePartOne = GetMessage(encoded, true);
-            var messagePartTwo = GetMessage(encoded, false);
+            string[] input = ReadInput();
+            char[][] encoded = ReverseInput(input);
+            string messagePartOne = GetMessage(encoded, true);
+            string messagePartTwo = GetMessage(encoded, false);
 
             WriteLine($"The message being sent is { messagePartOne }.");
             WriteLine($"The message actually being sent by Santa is { messagePartTwo }.");

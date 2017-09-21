@@ -16,7 +16,7 @@ namespace AdventOfCode2016
         // Crack the bathroom code.
         public static void Resolve()
         {
-            var input = ReadInput();
+            string[] input = ReadInput();
             foreach (string line in input)
             {
                 foreach (char c in line)

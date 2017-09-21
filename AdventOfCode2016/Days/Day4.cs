@@ -6,13 +6,14 @@ using static System.Console;
 
 namespace AdventOfCode2016
 {
+    // http://adventofcode.com/2016/day/4
     public static class Day4
     {
         // Find the real rooms.
         public static void Resolve()
         {
-            var input = ReadInput();
-            var result = GetSectorIdSum(input);
+            string[] input = ReadInput();
+            int result = GetSectorIdSum(input);
 
             WriteLine($"The sum of the sector IDs of the real rooms is { result }.");
         }
