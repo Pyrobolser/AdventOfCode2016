@@ -26,16 +26,10 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 7 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day7.txt");
-        }
+        private static string[] ReadInput() => File.ReadAllLines(@"Inputs\Day7.txt");
 
         // Find if an IP supports TLS.
-        private static bool IPSupportTLS(string ip)
-        {
-            return !Regex.IsMatch(ip, @"\[[a-z]*([a-z])(?!\1)([a-z])\2\1[a-z]*\]") && Regex.IsMatch(ip, @"([a-z])(?!\1)([a-z])\2\1");
-        }
+        private static bool IPSupportTLS(string ip) => !Regex.IsMatch(ip, @"\[[a-z]*([a-z])(?!\1)([a-z])\2\1[a-z]*\]") && Regex.IsMatch(ip, @"([a-z])(?!\1)([a-z])\2\1");
 
         // Find if an IP supports SSL.
         private static bool IPSupportSSL(string ip)

@@ -22,10 +22,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 8 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day8.txt");
-        }
+        private static string[] ReadInput() => File.ReadAllLines(@"Inputs\Day8.txt");
 
         // Draw every line of instruction.
         private static void DrawInstruction(Screen screen, string line)

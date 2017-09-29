@@ -22,10 +22,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 5 input.
-        private static string ReadInput()
-        {
-            return File.ReadAllText(@"Inputs\Day5.txt");
-        }
+        private static string ReadInput() => File.ReadAllText(@"Inputs\Day5.txt");
 
         // Get the first door password.
         private static string GetPassword(string input)

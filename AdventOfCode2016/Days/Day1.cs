@@ -37,7 +37,7 @@ namespace AdventOfCode2016
         // Start the movement analysis.
         public static void Resolve()
         {
-            string[] input = ReadInput();
+            string[] input = ReadInput;
             var isDoubleLocationFound = false;
             foreach (string s in input)
             {
@@ -62,10 +62,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 1 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllText(@"Inputs\day1.txt").Split(',').Select(s => s.Trim()).ToArray();
-        }
+        private static string[] ReadInput => File.ReadAllText(@"Inputs\day1.txt").Split(',').Select(s => s.Trim()).ToArray();
 
         // Get the character new position one block at a time for part 2.
         private static Coord GetNewPosition()

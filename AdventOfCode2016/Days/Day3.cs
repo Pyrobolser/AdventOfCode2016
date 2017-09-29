@@ -11,7 +11,7 @@ namespace AdventOfCode2016
         // Find the number of possible triangles.
         public static void Resolve()
         {
-            string[] input = ReadInput();
+            string[] input = ReadInput;
             int[,] triangles = GetTriangles(input);
             int[,] columnTriangles = GetColumnTriangles(input);
 
@@ -24,10 +24,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 3 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day3.txt").Select(s => s.TrimStart()).ToArray();
-        }
+        private static string[] ReadInput => File.ReadAllLines(@"Inputs\Day3.txt").Select(s => s.TrimStart()).ToArray();
 
         // Get the inline triangles.
         private static int[,] GetTriangles(string[] input)

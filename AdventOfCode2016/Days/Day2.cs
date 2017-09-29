@@ -16,7 +16,7 @@ namespace AdventOfCode2016
         // Crack the bathroom code.
         public static void Resolve()
         {
-            string[] input = ReadInput();
+            string[] input = ReadInput;
             foreach (string line in input)
             {
                 foreach (char c in line)
@@ -33,10 +33,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 2 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day2.txt");
-        }
+        private static string[] ReadInput => File.ReadAllLines(@"Inputs\Day2.txt");
 
         // Update the coordinates according to instructions.
         private static void UpdateCoordinates(char c)

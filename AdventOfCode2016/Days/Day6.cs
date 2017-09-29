@@ -21,10 +21,7 @@ namespace AdventOfCode2016
         }
 
         // Read the Day 6 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day6.txt");
-        }
+        private static string[] ReadInput() => File.ReadAllLines(@"Inputs\Day6.txt");
 
         // Put the columns in line for easy processing.
         private static char[][] ReverseInput(string[] input)

@@ -12,17 +12,14 @@ namespace AdventOfCode2016
         // Find the real rooms.
         public static void Resolve()
         {
-            string[] input = ReadInput();
+            string[] input = ReadInput;
             int result = GetSectorIdSum(input);
 
             WriteLine($"The sum of the sector IDs of the real rooms is { result }.");
         }
 
         // Read the Day 4 input.
-        private static string[] ReadInput()
-        {
-            return File.ReadAllLines(@"Inputs\Day4.txt");
-        }
+        private static string[] ReadInput => File.ReadAllLines(@"Inputs\Day4.txt");
 
         // Get the sum of the sector id of the valid rooms.
         private static int GetSectorIdSum(string[] input)
